@@ -6,26 +6,26 @@ const Section = ({ title, text, img, reverse, first }) => (
   <section
     className={`flex flex-col ${
       img ? (reverse ? "md:flex-row-reverse" : "md:flex-row") : "md:flex-col"
-    } ${first ? "items-center justify-center" : "items-start justify-start"} max-w-6xl mx-auto px-6 md:px-12 py-12 gap-8 bg-gray-100 `}
-    style={{ minHeight: first ? "400px" : "auto" }}
+    } ${first ? "items-center justify-center" : "items-start justify-start"} max-w-6xl mx-auto px-8 py-12 gap-8 bg-[#f5f5f5]`}
+    style={{ minHeight: first ? "500px" : "auto" }}
   >
     <div className={`${img ? "md:w-1/2" : "w-full"} ${first ? "text-center md:text-left" : "text-left"}`}>
       <h2
         className={`${
           first
-            ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#00D4FF]"
+            ? "text-4xl md:text-6xl font-extrabold text-[#00D4FF]"
             : "text-2xl sm:text-3xl md:text-4xl font-extrabold text-black"
-        } mb-3`}
+        } mb-4 tracking-wide`}
       >
         {title}
       </h2>
-      <p className="text-black leading-relaxed text-base sm:text-lg md:text-lg font-sans whitespace-pre-line">
+      <p className="text-base sm:text-lg md:text-lg text-gray-800 leading-relaxed font-sans whitespace-pre-line">
         {text}
       </p>
     </div>
     {img && (
       <div className="md:w-1/2 flex justify-center">
-        <img src={img} alt={title} className="w-full max-h-80 object-cover rounded-lg" />
+        <img src={img} alt={title} className="rounded-lg w-full max-h-80 object-cover" />
       </div>
     )}
   </section>
@@ -33,22 +33,21 @@ const Section = ({ title, text, img, reverse, first }) => (
 
 const Market = () => {
   return (
-    <div className="relative bg-white min-h-screen font-sans max-w-7xl mx-auto flex flex-col">
-
+    <div className="bg-white min-h-screen font-sans relative">
       <SideTextSidebar />
 
       {/* Header */}
-      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-2 z-50 flex justify-center items-center shadow-sm">
+      <div className="fixed top-0 left-0 right-0 w-full bg-white px-4 py-1 z-50 flex justify-center items-center shadow-sm">
         <Link to="/home">
           <img src="./logo.png" alt="RONIX Logo" className="h-14 sm:h-16 object-contain cursor-pointer" />
         </Link>
       </div>
 
-      {/* Spacer for header */}
+      {/* Spacer */}
       <div className="h-20"></div>
 
       {/* Sections */}
-      <div className="space-y-6 md:space-y-10 px-4 md:px-8 pb-40">
+      <div className="space-y-12 max-w-6xl mx-auto px-4">
         <Section
           first
           title="Digital Media Marketing"
@@ -72,8 +71,8 @@ const Market = () => {
         />
       </div>
 
-      {/* Mobile Bottom Menu (Above Footer) */}
-      <div className="sm:hidden fixed bottom-20 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black border-t border-gray-200">
+      {/* Mobile Bottom Menu */}
+      <div className="sm:hidden fixed bottom-16 left-0 right-0 bg-white flex justify-around py-4 z-50 text-black border-t border-gray-200">
         <Link to="/portfolio" className="font-extrabold text-sm uppercase hover:text-[#00D4FF] transition-colors">
           PORTFOLIO
         </Link>
