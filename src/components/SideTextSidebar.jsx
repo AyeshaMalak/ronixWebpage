@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SideTextSidebar = () => {
   return (
     <div
-      className="hidden sm:flex flex-col items-center gap-3 fixed z-40 left-24 top-[60%] -translate-y-1/2"
+      className="hidden sm:flex flex-col items-center gap-3 fixed z-40 left-24 top-1/2-translate-y-1/2"
     >
       <Link
         to="/portfolio"
@@ -35,3 +35,4 @@ const SideTextSidebar = () => {
 };
 
 export default SideTextSidebar;
+
