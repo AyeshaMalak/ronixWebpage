@@ -53,7 +53,7 @@ const Portfolio = () => {
       <div className="h-20"></div>
 
       {/* Portfolio Sections */}
-      <div className="px-6 md:px-30 py-2">
+      <div className="px-6 md:px-35 py-2">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {portfolioItems.map((item) => (
@@ -140,3 +140,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
